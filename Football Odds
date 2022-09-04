@@ -1,0 +1,169 @@
+public class MyClass {
+    public static void main(String args[]) {
+      double memphis = 0.274;
+      double ecu = 0.279;
+      double af = 0.209;
+      double tulsa = 0.518;
+      double smu = 0.119;
+      double houston = 0.202;
+      double temple = 0.829;
+      double cincinnati = 0.074;
+      double nd = 0.043;
+      double ucf = 0.076;
+      double army = 0.249;
+      String memphiss = " ";
+      String ecus = " ";
+      String afs = " ";
+      String tulsas = " ";
+      String smus = " ";
+      String houstons = " ";
+      String temples = " ";
+      String cincinnatis = " ";
+      String nds = " ";
+      String ucfs = " ";
+      String armys = " ";
+      double kpr = 0.0;
+      double r = 1.1;
+      String kprs = " ";
+      double z = Math.random();
+      for(int i = 0; i < 10000; i++)
+      {
+          memphis = 0.274;
+          ecu = 0.279;
+          af = 0.209;
+          tulsa = 0.518;
+          smu = 0.119;
+          houston = 0.202;
+          temple = 0.829;
+          cincinnati = 0.074;
+          nd = 0.043;
+          ucf = 0.076;
+          army = 0.249;
+          z = Math.random();
+          if(z < 0.5)
+          {
+              memphiss = " | Win against Memphis | ";
+          }
+          else
+          {
+              memphis = 1 - memphis;
+              memphiss = " | Lose to Memphis | ";
+          }
+          z = Math.random();
+          if(z < 0.5)
+          {
+              ecus = " | Win against ECU | ";
+          }
+          else
+          {
+              ecu = 1 - ecu;
+              ecus = " | Lose to ECU | ";
+          }
+          z = Math.random();
+          if(z < 0.5)
+          {
+              afs = " | Win against Air Force | ";
+          }
+          else
+          {
+              af = 1 - af;
+              afs = " | Lose to Air Force | ";
+          }
+          z = Math.random();
+          if(z < 0.5)
+          {
+              tulsas = " | Win against Tulsa | ";
+          }
+          else
+          {
+              tulsa = 1 - tulsa;
+              tulsas = " | Lose to Tulsa | ";
+          }
+          z = Math.random();
+          if(z < 0.5)
+          {
+              smus = " | Win against SMU | ";
+          }
+          else
+          {
+              smu = 1 - smu;
+              smus = " | Lose to SMU | ";
+          }
+          z = Math.random();
+          if(z < 0.5)
+          {
+              houstons = " | Win against Houston | ";
+          }
+          else
+          {
+              houston = 1 - houston;
+              houstons = " | Lose to Houston | ";
+          }
+          z = Math.random();
+          if(z < 0.5)
+          {
+              temples = " | Win against Temple | ";
+          }
+          else
+          {
+              temple = 1 - temple;
+              temples = " | Lose to Temple | ";
+          }
+          z = Math.random();
+          if(z < 0.5)
+          {
+              cincinnatis = " | Win against Cincinnati | ";
+          }
+          else
+          {
+              cincinnati = 1 - cincinnati;
+              cincinnatis = " | Lose to Cincinnati | ";
+          }
+          z = Math.random();
+          if(z < 0.5)
+          {
+              nds = " | Win against Notre Dame | ";
+          }
+          else
+          {
+              nd = 1 - nd;
+              nds = " | Lose to Notre Dame | ";
+          }
+          z = Math.random();
+          if(z < 0.5)
+          {
+              ucfs = " | Win against UCF | ";
+          }
+          else
+          {
+              ucf = 1 - ucf;
+              ucfs = " | Lose to UCF | ";
+          }
+          z = Math.random();
+          if(z < 0.5)
+          {
+              armys = " | Win against Army | ";
+          }
+          else
+          {
+              army = 1 - army;
+              armys = " | Lose to Army | ";
+          }
+          r = memphis * ecu * af * tulsa * smu * houston * temple * cincinnati * nd * ucf * army;
+          if(r > kpr)
+          {
+              kprs = memphiss + ecus + afs + tulsas + smus + houstons + temples + cincinnatis + nds + ucfs + armys;
+              kpr = memphis * ecu * af * tulsa * smu * houston * temple * cincinnati * nd * ucf * army;
+          }
+          
+      }
+      kpr = kpr * 100;
+      System.out.println(kprs);
+      System.out.println(kpr);
+    }
+}
+     
+      
+             
+
+   
