@@ -23,8 +23,10 @@ public class MyClass {
       String ucfs = " ";
       String armys = " ";
       double kpr = 0.0;
+      double kprO = 0.0;
       double r = 1.1;
       String kprs = " ";
+      String kprsO = " ";
       double z = Math.random();
       for(int i = 0; i < 10000; i++)
       {
@@ -43,6 +45,7 @@ public class MyClass {
           if(z < 0.5)
           {
               memphiss = " | Win against Memphis | ";
+          }
           }
           else
           {
@@ -102,7 +105,7 @@ public class MyClass {
           z = Math.random();
           if(z < 0.5)
           {
-              temples = " | Win against Temple | ";
+               temples = " | Win against Temple | ";
           }
           else
           {
@@ -150,20 +153,23 @@ public class MyClass {
               armys = " | Lose to Army | ";
           }
           r = memphis * ecu * af * tulsa * smu * houston * temple * cincinnati * nd * ucf * army;
-          if(r > kpr)
+          if(r > kpr && r > kprO)
           {
               kprs = memphiss + ecus + afs + tulsas + smus + houstons + temples + cincinnatis + nds + ucfs + armys;
               kpr = memphis * ecu * af * tulsa * smu * houston * temple * cincinnati * nd * ucf * army;
           }
-          
+          if (r < kpr && r > kprO)
+          {
+              kprsO = memphiss + ecus + afs + tulsas + smus + houstons + temples + cincinnatis + nds + ucfs + armys;
+              kprO = memphis * ecu * af * tulsa * smu * houston * temple * cincinnati * nd * ucf * army;
+          }
       }
       kpr = kpr * 100;
+      kprO = kprO * 100;
       System.out.println(kprs);
       System.out.println(kpr);
+      System.out.println(kprsO);
+      System.out.println(kprO);
     }
 }
      
-      
-             
-
-   
