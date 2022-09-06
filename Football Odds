@@ -24,9 +24,12 @@ public class MyClass {
       String armys = " ";
       double kpr = 0.0;
       double kprO = 0.0;
+      double kpr1 = 0.0;
       double r = 1.1;
       String kprs = " ";
       String kprsO = " ";
+      String kprs1 = " ";
+      Integer w = 0;
       double z = Math.random();
       for(int i = 0; i < 10000; i++)
       {
@@ -46,11 +49,10 @@ public class MyClass {
           {
               memphiss = " | Win against Memphis | ";
           }
-          }
           else
           {
               memphis = 1 - memphis;
-              memphiss = " | Lose to Memphis | ";
+              //memphiss = " | Lose to Memphis | ";
           }
           z = Math.random();
           if(z < 0.5)
@@ -60,7 +62,7 @@ public class MyClass {
           else
           {
               ecu = 1 - ecu;
-              ecus = " | Lose to ECU | ";
+              //ecus = " | Lose to ECU | ";
           }
           z = Math.random();
           if(z < 0.5)
@@ -70,7 +72,7 @@ public class MyClass {
           else
           {
               af = 1 - af;
-              afs = " | Lose to Air Force | ";
+             // afs = " | Lose to Air Force | ";
           }
           z = Math.random();
           if(z < 0.5)
@@ -80,7 +82,7 @@ public class MyClass {
           else
           {
               tulsa = 1 - tulsa;
-              tulsas = " | Lose to Tulsa | ";
+              //tulsas = " | Lose to Tulsa | ";
           }
           z = Math.random();
           if(z < 0.5)
@@ -90,7 +92,7 @@ public class MyClass {
           else
           {
               smu = 1 - smu;
-              smus = " | Lose to SMU | ";
+              //smus = " | Lose to SMU | ";
           }
           z = Math.random();
           if(z < 0.5)
@@ -100,17 +102,17 @@ public class MyClass {
           else
           {
               houston = 1 - houston;
-              houstons = " | Lose to Houston | ";
+              //houstons = " | Lose to Houston | ";
           }
           z = Math.random();
           if(z < 0.5)
           {
-               temples = " | Win against Temple | ";
+              temples = " | Win against Temple | ";
           }
           else
           {
               temple = 1 - temple;
-              temples = " | Lose to Temple | ";
+             // temples = " | Lose to Temple | ";
           }
           z = Math.random();
           if(z < 0.5)
@@ -120,7 +122,7 @@ public class MyClass {
           else
           {
               cincinnati = 1 - cincinnati;
-              cincinnatis = " | Lose to Cincinnati | ";
+              //cincinnatis = " | Lose to Cincinnati | ";
           }
           z = Math.random();
           if(z < 0.5)
@@ -130,7 +132,7 @@ public class MyClass {
           else
           {
               nd = 1 - nd;
-              nds = " | Lose to Notre Dame | ";
+             // nds = " | Lose to Notre Dame | ";
           }
           z = Math.random();
           if(z < 0.5)
@@ -140,7 +142,7 @@ public class MyClass {
           else
           {
               ucf = 1 - ucf;
-              ucfs = " | Lose to UCF | ";
+              //ucfs = " | Lose to UCF | ";
           }
           z = Math.random();
           if(z < 0.5)
@@ -150,7 +152,7 @@ public class MyClass {
           else
           {
               army = 1 - army;
-              armys = " | Lose to Army | ";
+              //armys = " | Lose to Army | ";
           }
           r = memphis * ecu * af * tulsa * smu * houston * temple * cincinnati * nd * ucf * army;
           if(r > kpr && r > kprO)
@@ -158,18 +160,47 @@ public class MyClass {
               kprs = memphiss + ecus + afs + tulsas + smus + houstons + temples + cincinnatis + nds + ucfs + armys;
               kpr = memphis * ecu * af * tulsa * smu * houston * temple * cincinnati * nd * ucf * army;
           }
-          if (r < kpr && r > kprO)
+           if (r < kpr && r > kprO)
           {
               kprsO = memphiss + ecus + afs + tulsas + smus + houstons + temples + cincinnatis + nds + ucfs + armys;
               kprO = memphis * ecu * af * tulsa * smu * houston * temple * cincinnati * nd * ucf * army;
           }
+          if (r > 0.029 && r < 0.07)
+          {
+              kprs1 = memphiss + ecus + afs + tulsas + smus + houstons + temples + cincinnatis + nds + ucfs + armys;
+              kpr1 = memphis * ecu * af * tulsa * smu * houston * temple * cincinnati * nd * ucf * army;
+          }
+          if (r > 0.01)
+          {
+              r = r * 100;
+              System.out.println(memphiss + ecus + afs + tulsas + smus + houstons + temples + cincinnatis + nds + ucfs + armys);
+              System.out.println(r);
+              System.out.println(" ");
+          }
+          memphiss = " ";
+          ecus = " ";
+          afs = " ";
+          tulsas = " ";
+          smus = " ";
+          houstons = " ";
+          temples = " ";
+          cincinnatis = " ";
+          nds = " ";
+          ucfs = " ";
+          armys = " ";
+         
       }
+      /*
       kpr = kpr * 100;
       kprO = kprO * 100;
+      kpr1 = kpr1 * 100;
       System.out.println(kprs);
       System.out.println(kpr);
       System.out.println(kprsO);
       System.out.println(kprO);
+      System.out.println(kprs1);
+      System.out.println(kpr1);
+      */
     }
 }
      
